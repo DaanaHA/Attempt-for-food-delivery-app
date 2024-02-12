@@ -34,19 +34,21 @@ class ProfilePage extends StatelessWidget {
                        const SizedBox(
                         child: Text("@Ahmad_Dana", style: TextStyle(fontSize: 12), textAlign: TextAlign.center, selectionColor: AppColors.grey) ,
                        ),
+                       const SizedBox(height: 8),
                           SizedBox(
                     width: 120,
                     height:  35,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                       backgroundColor: Color.fromARGB(255, 239, 161, 124), side: BorderSide.none, shape: const StadiumBorder()),
+                       backgroundColor: Color.fromARGB(255, 240, 175, 146), side: BorderSide.none, shape: const StadiumBorder()),
                   child: const Text("Edit Profile", style: TextStyle(color: Color.fromARGB(101, 0, 0, 0), fontSize: 10)),
                     ),
                   ),
                  // const SizedBox(height: 20),
                  // const Divider(), 
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 10,
+                   ),
                   const SizedBox(
                     height: 35,
                     width: 450,
