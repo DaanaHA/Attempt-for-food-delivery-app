@@ -44,8 +44,14 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar>
     final size = MediaQuery.of(context).size;
     return Scaffold(
       drawer: const Drawer(
-        child: Center(
-          child: Text('Inside the drawer!'),
+        child: Column(
+
+          children:[
+          // [ DrawerButton( Text("hello")),
+            Center(
+              child: Text('Inside the drawer!'),
+            ),
+          ],
         ),
       ),
       appBar: AppBar(

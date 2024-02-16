@@ -71,8 +71,13 @@ class ProfilePage extends StatelessWidget {
                     width: 450,
                     child: TextField(
                       decoration:  InputDecoration(labelText: "BankAccountNO \t \t 121415222222",labelStyle:  TextStyle(color: AppColors.grey)),
+                     
                    )),
-                 
+                   //another way to make profile image
+                //  const CircleAvatar(
+                //     radius: 150,
+                //     backgroundImage: NetworkImage('https://'),
+                //  )
 
             ],
           ),

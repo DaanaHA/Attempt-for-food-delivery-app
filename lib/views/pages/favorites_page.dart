@@ -21,8 +21,9 @@ class _FavoritesPageState extends State<FavoritesPage> {
         child: Text('No Favorite Products!'),
       );
     }
-
+//listview> card >padding>leading>title>traling <the base without logical implimintation>
     return ListView.builder(
+      //insted of "itemCount: dummyProducts.length">>all products at all base read from the list
         itemCount: favProducts.length,
         itemBuilder: (context, index) {
           return Card(
@@ -47,18 +48,22 @@ class _FavoritesPageState extends State<FavoritesPage> {
                         fontWeight: FontWeight.bold,
                       ),
                 ),
+                //to impliment the logical part you can add at product class bool final var "is favorite"
+           //or make list of product at product class -thets what we did -
                 subtitle: Text(
                   '${favProducts[index].category.title} - \$${favProducts[index].price}',
                   style: Theme.of(context).textTheme.labelLarge!.copyWith(
                         fontWeight: FontWeight.normal,
                       ),
                 ),
+                //in positioned method in produuct class at on tap make a set state and 
                 trailing: orientation == Orientation.portrait ? IconButton(
                   onPressed: () {
                     setState(() {
                       favProducts.remove(favProducts[index]);
                     });
                   },
+                  //at home page use push() and at then statement add a setState(( ){}).
                   icon: const Icon(Icons.favorite),
                   color: Theme.of(context).primaryColor,
                 ) : TextButton.icon(
