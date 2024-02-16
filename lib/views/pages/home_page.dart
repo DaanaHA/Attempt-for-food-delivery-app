@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     debugPrint('HomePage build()');
+    //عشان بس اقلب التلفون يصير بالعرض كيف يظهر
     final orientation = MediaQuery.of(context).orientation;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
@@ -115,6 +116,7 @@ class _HomePageState extends State<HomePage> {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  //شرط قديش يعرض بالطول وبالعرض لهف 
                   crossAxisCount: orientation == Orientation.portrait ? 2 : 5,
                   mainAxisSpacing: 12,
                   crossAxisSpacing: 12,
